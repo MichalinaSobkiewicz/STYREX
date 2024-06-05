@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>STYREX - Prawdziwy Styropian</title>
+    <style>
+        body {
+            font-size: 25px;
+            font-family: 'Arial', sans-serif;
+            background-image: url('styro-main.jpg');
+            color: white;
+            margin: 0; 
+            padding: 0; 
+        }
+        .header {
+            background: rgba(0, 0, 0, 0.655);
+            background-size: cover;
+            text-align: center;
+            padding: 15px 0; /* Zmniejszenie paddingu */
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Wyśrodkuj zawartość na lewo */
+            padding-left: 20px; /* Dodaj odstęp z lewej strony */
+            box-sizing: border-box; /* Włącz box-sizing */
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .logo {
+            max-width: 12%; /* Zmniejszenie szerokości logo */
+            margin-right: 20px; /* Dodaj odstęp między logo a tytułem */
+        }
+        .title {
+            font-family: Arial, sans-serif; 
+            font-size: 40px; /* Zmniejszenie rozmiaru tytułu */
+            font-weight: bold; 
+            color: white;
+            margin: 0; /* Usuń domyślne marginesy */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+        .button-container a {
+            background-color: rgba(255, 216, 20, 0.8);
+            color: rgba(0, 0, 0, 0.655);
+            width: 40%; /* Zwiększenie szerokości przycisków */
+            height: 120px; /* Zwiększenie wysokości przycisków */
+            border-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 30px; /* Zwiększenie rozmiaru czcionki */
+        }
+        .button-container a:hover {
+            background-color: rgba(0, 0, 0, 0.655);
+            color: rgb(255, 216, 20, 0.8);
+        }
+        .button-container a:active {
+            opacity: 0.75;
+        }
+        table {
+            background: url('bck_new.png'); 
+            width: 100%;
+            font-family: Arial, sans-serif; 
+            color: white; 
+            margin-top: 20px;
+        }
+        td {
+            padding: 10px; 
+            font-family: Arial, sans-serif; 
+            color: white; 
+        }
+        .contact-info {
+            background-color: rgba(0, 0, 0, 0.655); 
+            padding: 20px; 
+        }
+        b {
+            font-family: Arial, sans-serif; 
+            font-weight: bold; 
+        }
+        /* Dodaj animację przejścia */
+        #changingImage {
+            transition: opacity 0.5s ease-in-out; /* Delikatne przejście przezroczystości */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="Logo STYREX" class="logo">
+        <h1 class="title">STYREX - Prawdziwy Styropian</h1>
+    </div>
+
+    <div class="button-container">
+        <a class="o_nas" href="onas.html">O NAS</a>
+        <a class="produkty" href="produkty.html">PRODUKTY</a>
+        <a class="zaloguj_sie" href="loguj.html">ZALOGUJ SIĘ</a>
+    </div>
+		
+    <img id="changingImage" src="mp_pic.jpg" alt="zdjęcie" style="display: block; margin: 0 auto;">
+  
+    <table background="tlo.png">
+        <tr>
+            <td width="40%" class="contact-info">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9438.298605696486!2d20.45614!3d53.74365!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e27f4da93ae01d%3A0xea956f263f7cf90!2sWydzia%C5%82%20Matematyki%20i%20Informatyki%20Uniwersytetu%20Warmi%C5%84sko-Mazurskiego%20w%20Olsztynie!5e0!3m2!1spl!2spl!4v1717524164729!5m2!1spl!2spl" width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            <td align="left" class="contact-info">
+                Słoneczna 54, 10-710 Olsztyn <br>
+                Telefon (biuro): 700 100 100 <br>
+                E-mail: kontakt@styrex.pl
+            </td>
+            <td align="left" class="contact-info">
+                <b>Godziny otwarcia biura:</b> <br>
+                7:00-16:00 (pon-czw) <br>
+                8:00-15:00 (pt-nd)
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        // Lista adresów URL obrazków do zmiany
+        var imageUrls = ["mp_pic.jpg", "mp_pic2.jpg", "mp_pic3.jpg", "mp_pic4.jpg"]; // Dodaj więcej adresów URL według potrzeb
+
+        var currentIndex = 0; // Indeks aktualnie wyświetlanego obrazka
+
+        // Funkcja do zmiany obrazka co określony interwał czasowy
+        function changeImage() {
+            // Zmiana indeksu na kolejny obrazek
+            currentIndex = (currentIndex + 1) % imageUrls.length;
+            // Ustawienie nowego adresu URL obrazka
+            document.getElementById('changingImage').src = imageUrls[currentIndex];
+        }
+
+        // Wywołanie funkcji changeImage() co 5 sekund
+        setInterval(changeImage, 3000); // Zmiana co 5 sekund (5000 milisekund)
+    </script>
+
+</body>
+</html>

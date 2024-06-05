@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wybór typu klienta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: rgba(255, 216, 20, 0.8);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.575);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Jakim klientem jesteś?</h1>
+        <label for="clientType">Typ klienta:</label>
+        <select id="clientType" name="clientType">
+            <option value="individual">Klient indywidualny</option>
+            <option value="b2b">Klient B2B</option>
+            <option value="corporate">Klient korporacyjny</option>
+        </select>
+        <button type="button" onclick="submitClientType()">Zatwierdź</button>
+    </div>
+
+    <script>
+        function submitClientType() {
+            var clientType = document.getElementById('clientType').value;
+            if (clientType === 'individual') {
+                window.location.href = 'indywidualny.html';
+            } else if (clientType === 'b2b') {
+                window.location.href = 'b2b.html';
+            } else if (clientType === 'corporate') {
+                window.location.href = 'korporacyjny.html';
+            }
+        }
+    </script>
+</body>
+</html>

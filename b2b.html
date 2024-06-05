@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indywidualny</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .login-box {
+            max-width: 300px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-box h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 92.75%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            align-self:center;
+        }
+        .login-box input[type="submit"] {
+            background: rgba(255, 216, 20, 0.8);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .login-box input[type="submit"]:hover {
+            background:  rgba(0, 0, 0, 0.575);
+        }
+        .register-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .register-link a {
+            color: rgba(255, 216, 20, 0.8);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Zarejestruj się</h2>
+        <form action="login.php" method="post">
+            <input type="text" name="username" placeholder="E-mail*" required>
+            <input type="password" name="password" placeholder="Hasło*" required>
+            <input type="password" name="password" placeholder="Powtórz hasło*" required>
+            <input type="text" name="imie" placeholder="Nazwa Przedstawiciela*" required>
+            <input type="text" name="imie" placeholder="NIP*" required>
+            <input type="text" name="Nr telefonu" placeholder="Numer telefonu*" required>
+            <input type="text" name="Ulica" placeholder="Ulica*" required>
+            <input type="text" name="nrDomu" placeholder="Numer Domu*" required>
+            <input type="text" name="nrLokalu" placeholder="Numer Lokalu">
+            <input type="text" name="Miasto" placeholder="Miasto*" required>
+            <input type="text" name="Miasto" placeholder="Kod Pocztowy*" required>
+            <input type="submit" value="Zarejestruj się">
+        </form>
+        
+    </div>
+</body>
+</html>

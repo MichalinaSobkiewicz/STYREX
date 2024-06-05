@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Klienta</title>
+    <style>
+      .header {
+            background: rgba(0, 0, 0, 0.655);
+            background-size: cover;
+            text-align: center;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; 
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+        .logo {
+            max-width: 15%; 
+            margin-right: 20px; 
+        }
+        .title {
+            font-family: Arial, sans-serif; 
+            font-size: 36px; 
+            font-weight: bold; 
+            color: white;
+            margin: 0; 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+        .button-container a {
+            background-color: rgba(255, 216, 20, 0.8);
+            color: rgba(0, 0, 0, 0.655);
+            width: 50%;
+            height: 40px;
+            border-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        .button-container a:hover {
+            background-color: rgba(0, 0, 0, 0.655);
+            color: rgb(255, 255, 255);
+        }
+        .button-container a:active {
+            opacity: 0.75;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+        <img src="logo.png" alt="Logo STYREX" class="logo">
+        <h1 class="title">Moje konto - PRACOWNIK BIURA</h1>
+    </div>
+<div class="button-container">
+    <a class="o_nas" href="zarzadzajzam.html">Zarządzanie zamówieniami</a>
+    <a class="zaloguj_sie" href="daneprac.html">Moje dane</a>
+</div>
+
+</body>
+</html>

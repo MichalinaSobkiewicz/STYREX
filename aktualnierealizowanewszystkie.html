@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Aktualnie Realizowane Zamówienia</title>
+    <style>
+        .header {
+            background: rgba(0, 0, 0, 0.655);
+            background-size: cover;
+            text-align: center;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Wyśrodkuj zawartość na lewo */
+            padding-left: 20px; /* Dodaj odstęp z lewej strony */
+            box-sizing: border-box; /* Włącz box-sizing */
+        }
+        .logo {
+            max-width: 15%; /* Dostosuj szerokość logo do 20% szerokości okna przeglądarki */
+            margin-right: 20px; /* Dodaj odstęp między logo a tytułem */
+        }
+        .title {
+            font-family: Arial, sans-serif; 
+            font-size: 36px; 
+            font-weight: bold; 
+            color: white;
+            margin: 0; /* Usuń domyślne marginesy */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .order-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .order-table th, .order-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .order-table th {
+            background-color: rgba(255, 216, 20, 0.8);
+            color: white;
+        }
+
+        .order-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .order-table tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="logo.png" alt="Logo STYREX" class="logo">
+    <h1 class="title">Aktualnie Realizowane Zamówienia</h1>
+</div>
+
+<div class="container">
+    <table class="order-table">
+        <thead>
+            <tr>
+                <th>Nr Zamówienia</th>
+                <th>Cena</th>
+                <th>Data Zamówienia</th>
+                <th>Status Zamówienia</th>
+                <th>Status Płatności</th>
+                <th>Nr Faktury</th>
+                <th>Data Wystawienia Faktury</th>
+                <th>Data Płatności</th>
+                <th>Data Załadunku</th>
+                <th>Miejsce Dostawy</th>
+                <th>Data Dostawy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>12345</td>
+                <td>1000,00 zł</td>
+                <td>2024-05-01</td>
+                <td>W trakcie</td>
+                <td>Opłacone</td>
+                <td>INV12345</td>
+                <td>2024-05-02</td>
+                <td>2024-05-02</td>
+                <td>2024-05-10</td>
+                <td>Warszawa</td>
+                <td>2024-05-12</td>
+            </tr>
+            <tr>
+                <td>12346</td>
+                <td>2000,00 zł</td>
+                <td>2024-05-03</td>
+                <td>W trakcie</td>
+                <td>Nieopłacone</td>
+                <td>INV12346</td>
+                <td>2024-05-04</td>
+                <td>2024-05-05</td>
+                <td>2024-05-15</td>
+                <td>Kraków</td>
+                <td>2024-05-17</td>
+            </tr>
+            <!-- Dodaj więcej wierszy zamówień tutaj -->
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

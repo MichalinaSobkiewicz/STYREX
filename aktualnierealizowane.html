@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Aktualnie realizowane zamówienia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.655);
+            background-size: cover;
+            text-align: center;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            max-width: 15%;
+            margin-right: 20px;
+        }
+
+        .title {
+            font-family: Arial, sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="logo.png" alt="Logo STYREX" class="logo">
+    <h1 class="title">Aktualnie realizowane zamówienia</h1>
+</div>
+
+<div class="container">
+    <table>
+        <tr>
+            <th>Data złożenia zamówienia</th>
+            <th>Cena</th>
+            <th>Status zamówienia</th>
+            <th>Szacowana data doręczenia</th>
+        </tr>
+        <tr>
+            <td>04-06-2024</td>
+            <td>4710,00</td>
+            <td>Przyjęto do realizacji</td>
+            <td>09-06-2024</td>
+        </tr>
+        
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Produktów</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: rgba(0, 0, 0, 0.655);
+            background-size: cover;
+            text-align: center;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Wyśrodkuj zawartość na lewo */
+            padding-left: 20px; /* Dodaj odstęp z lewej strony */
+            box-sizing: border-box; /* Włącz box-sizing */
+            margin-bottom: 20px;
+        }
+        .logo {
+            max-width: 15%; /* Dostosuj szerokość logo do 20% szerokości okna przeglądarki */
+            margin-right: 20px; /* Dodaj odstęp między logo a tytułem */
+        }
+        .title {
+            font-family: Arial, sans-serif; 
+            font-size: 36px; 
+            font-weight: bold; 
+            color: white;
+            margin: 0; /* Usuń domyślne marginesy */
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+        .product {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img {
+            width: 100px;
+            height: 100px;
+       
+            margin-bottom: 10px;
+        }
+        .product h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .product p {
+            font-size: 14px;
+            color: #888888;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.575);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: rgba(255, 216, 20, 0.8);
+        }
+
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type=text] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type=submit] {
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.575);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        input[type=submit]:hover {
+            background-color: rgba(255, 216, 20, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="Logo STYREX" class="logo">
+        <h1 class="title">STYREX - Prawdziwy Styropian</h1>
+    </div>
+
+    <div class="search-container">
+        <form id="searchForm">
+            <input type="text" placeholder="Wyszukaj produkty..." id="searchInput">
+            <input type="submit" value="Szukaj">
+        </form>
+    </div>
+
+<div class="container" id="productContainer">
+    <!-- Product cards here -->
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var searchForm = document.getElementById("searchForm");
+        var searchInput = document.getElementById("searchInput");
+        var productContainer = document.getElementById("productContainer");
+        var products = Array.from(document.querySelectorAll(".product")); // Store original order of products
+
+        searchForm.addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            var searchQuery = searchInput.value.toLowerCase(); 
+
+            // Clear the product container
+            productContainer.innerHTML = '';
+
+            if (searchQuery === "") {
+                // If the search input is empty, reset to original order
+                products.forEach(function(product) {
+                    productContainer.appendChild(product);
+                });
+            } else {
+                // Filter and display products matching the search query
+                products.forEach(function(product) {
+                    var productName = product.querySelector("h2").textContent.toLowerCase(); 
+
+                    if (productName.includes(searchQuery)) { 
+                        productContainer.appendChild(product); 
+                    }
+                });
+            }
+        });
+
+        searchInput.addEventListener("input", function() {
+            if (searchInput.value === "") {
+                // If the search input is cleared, reset to original order
+                productContainer.innerHTML = '';
+                products.forEach(function(product) {
+                    productContainer.appendChild(product);
+                });
+            }
+        });
+    });
+</script>
+
+<div class="container">
+    <div class="product">
+        <img src="1.jpg" alt="FASADA CLASSIC">
+        <h2>FASADA CLASSIC</h2>
+        <p>Wymiary płyt 1000×500 mm.
+					Grubość płyt od 20 do 300 mm.
+					Krawędzie proste lub „na zakładkę”.
+					Na indywidualne zamówienie wymiary do 4000x1200x1000 mm.</p>
+                    
+        <button type="button" onclick="window.location.href='loguj.html'">Dodaj do koszyka</button>
+    </div>
+    <div class="product">
+        <img src="2.jpg" alt="Fasada KOMFORT">
+        <h2>Fasada KOMFORT</h2>
+        <p>Wymiary płyt 1000×500 mm.
+					Grubość płyt od 20 do 300 mm.
+					Krawędzie proste lub „na zakładkę”.
+					Na indywidualne zamówienie wymiary do 4000x1200x1000 mm.</p>
+        <button type="button" onclick="window.location.href='loguj.html'">Dodaj do koszyka</button>
+    </div>
+    <div class="product">
+        <img src="3.jpg" alt="Fasada EXPERT">
+        <h2>Fasada EXPERT</h2>
+        <p>Wymiary płyt 1000×500 mm.
+					Grubość płyt od 10 do 300 mm.
+					Krawędzie proste lub „na zakładkę”.
+					Na indywidualne zamówienie wymiary do 4000x1200x1000 mm.</p>
+        <button type="button" onclick="window.location.href='loguj.html'">Dodaj do koszyka</button>
+    </div>
+    <div class="product">
+        <img src="4.jpg" alt="Fasada GRAFIT">
+        <h2>Fasada GRAFIT</h2>
+        <p>Wymiary płyt 1000×500 mm.
+					Grubość płyt od 10 do 300 mm.
+					Krawędzie proste lub „na zakładkę”.
+					Na indywidualne zamówienie wymiary do 4000x1200x1000 mm.s</p>
+
+        <button type="button" onclick="window.location.href='loguj.html'">Dodaj do koszyka</button>
+    </div>
+    <div class="product">
+        <img src="5.jpg" alt="Fasada FS 15">
+        <h2>Fasada FS 15</h2>
+        <p>Wymiary płyt 1000×500 mm.
+					Grubość płyt od 10 do 300 mm.
+					Krawędzie proste lub „na zakładkę”.
+					Na indywidualne zamówienie wymiary do 6000x1200x1000 mm.</p>
+        <button type="button" onclick="window.location.href='loguj.html'">Dodaj do koszyka</button>
+    </div>
+    <div class="product">
+        <img src="6.jpg" alt="EPS 100 PODŁOGA/DACH
+				">
+        <h2>EPS 100 PODŁOGA/DACH</h2>
+        <p>Wymiary płyt 1000×500 mm.
+					Grubość płyt od 20 do 300 mm.
+					Krawędzie proste lub „na zakładkę”.
+					Na indywidualne zamówienie wymiary do 6000x1200x1000 mm.</p>
+        <button type="button" onclick="window.location.href='loguj.html'">Dodaj do koszyka</button>
+    </div>
+		<div class="product">
+			<img src="7.jpg" alt="EPS 80-040">
+			<h2>EPS 80-040</h2>
+			<p>Wymiary płyt 1000×500 mm.
+				Grubość płyt od 20 do 300 mm(co 10 mm).
+				Krawędzie proste lub „na zakładkę”.
+				Na indywidualne zamówienie wymiary do 6000x1200x1000 mm.
+				Płyty o powiększonej powierzchni klejącej lub standardowej powierzchni klejącej.</p>
+        <button type="button" onclick="window.location.href='loguj.html'">Dodaj do koszyka</button>
+	</div>
+	<div class="product">
+			<img src="8.jpg" alt="TONOPIAN EPS T 4,0">
+			<h2>TONOPIAN EPS T 4,0</h2>
+				<p>Wymiary płyt 1000×500 mm.
+					Grubość płyt od 10 do 300 mm.
+					Krawędzie proste lub „na zakładkę”.
+					Na indywidualne zamówienie wymiary do 4000x1200x1000 mm.</p>
+        <button type="button" onclick="window.location.href='loguj.html'">Dodaj do koszyka</button>
+	</div>
+	<div class="product">
+			<img src="9.jpg" alt="PARKING EXPERT">
+			<h2>PARKING EXPERT</h2>
+			<p>Wymiary płyt 1000×500 mm.
+				Grubość płyt od 10 do 300 mm.
+				Krawędzie proste lub „na zakładkę”.
+				Na indywidualne zamówienie wymiary do 4000x1200x1000 mm.</p>
+        <button type="button" onclick="window.location.href='loguj.html'">Dodaj do koszyka</button>
+	</div>
+	
+	<div class="product">
+			<img src="10.jpg" alt="TONOPIAN EPS T 4,0">
+			<h2>TONOPIAN EPS T 4,0</h2>
+			<p>Wymiary płyt 1000×500 mm.
+				Grubość płyt od 10 do 300 mm.
+				Krawędzie proste lub „na zakładkę”.
+				Na indywidualne zamówienie wymiary do 4000x1200x1000 mm.</p>
+        <button type="button" onclick="window.location.href='loguj.html'">Dodaj do koszyka</button>
+	</div>
+	<div class="product">
+			<img src="11.jpg" alt="STYROPIAN XPS">
+			<h2>STYROPIAN XPS</h2>
+			<p>Wymiary płyt 1000×500 mm.
+				Grubość płyt od 10 do 300 mm.
+				Krawędzie proste lub „na zakładkę”.
+				Na indywidualne zamówienie wymiary do 4000x1200x1000 mm.</p>
+        <button type="button" onclick="window.location.href='loguj.html'">Dodaj do koszyka</button>
+	</div>
+	<div class="product">
+			<img src="12.jpg" alt="Styropapa">
+			<h2>STYROPAPA</h2>
+			<p>Wymiary płyt 1000×500 mm.
+				Grubość płyt od 10 do 300 mm.
+				Krawędzie proste lub „na zakładkę”.
+				Na indywidualne zamówienie wymiary do 4000x1200x1000 mm.</p>
+        <button type="button" onclick="window.location.href='loguj.html'">Dodaj do koszyka</button>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Moje Dane</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; /* Usuń domyślne marginesy dla całego dokumentu */
+            padding: 0; /* Usuń domyślne wcięcie dla całego dokumentu */
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.655);
+            background-size: cover;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0; /* Usuń marginesy górny i dolny */
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Wyśrodkuj zawartość na lewo */
+            box-sizing: border-box; /* Włącz box-sizing */
+        }
+
+        .logo {
+            max-width: 15%; /* Dostosuj szerokość logo do 20% szerokości okna przeglądarki */
+            margin-right: 20px; /* Dodaj odstęp między logo a tytułem */
+        }
+
+        .title {
+            font-family: Arial, sans-serif; 
+            font-size: 36px; 
+            font-weight: bold; 
+            color: white;
+            margin: 0; /* Usuń domyślne marginesy */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="logo.png" alt="Logo STYREX" class="logo">
+    <h1 class="title">Moje dane</h1>
+</div>
+
+<table>
+    <tr>
+        <th>E-mail</th>
+        <td>jankowalski@klient.pl</td>
+    </tr>
+    <tr>
+        <th>Imię</th>
+        <td>Jan</td>
+    </tr>
+    <tr>
+        <th>Nazwisko</th>
+        <td>Kowalski</td>
+    </tr>
+    <tr>
+        <th>Numer telefonu</th>
+        <td>600 606 600</td>
+    </tr>
+    <tr>
+        <th>Ulica</th>
+        <td>Stokrotkowa</td>
+    </tr>
+    <tr>
+        <th>Numer domu</th>
+        <td>10</td>
+    </tr>
+    <tr>
+        <th>Numer lokalu</th>
+        <td>15</td>
+    </tr>
+    <tr>
+        <th>Miasto</th>
+        <td>Warszawa</td>
+    </tr>
+    <tr>
+        <th>Kod pocztowy</th>
+        <td>12-121</td>
+    </tr>
+</table>
+
+</body>
+</html>
