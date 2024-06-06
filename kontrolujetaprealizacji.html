@@ -4,42 +4,29 @@
     <meta charset="UTF-8">
     <title>Panel Klienta</title>
     <style>
-        .header {
+      .header {
             background: rgba(0, 0, 0, 0.655);
             background-size: cover;
             text-align: center;
             padding: 20px 0;
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Dodaj miejsce między logo a tytułem */
-            padding-left: 20px;
-            padding-right: 20px;
-            box-sizing: border-box;
+            justify-content: flex-start; /* Wyśrodkuj zawartość na lewo */
+            padding-left: 20px; /* Dodaj odstęp z lewej strony */
+            box-sizing: border-box; /* Włącz box-sizing */
         }
         .logo {
-            max-width: 15%;
-            margin-right: 20px;
+            max-width: 15%; /* Dostosuj szerokość logo do 20% szerokości okna przeglądarki */
+            margin-right: 20px; /* Dodaj odstęp między logo a tytułem */
         }
         .title {
-            font-family: Arial, sans-serif;
-            font-size: 36px;
-            font-weight: bold;
+            font-family: Arial, sans-serif; 
+            font-size: 36px; 
+            font-weight: bold; 
             color: white;
-            margin: 0;
+            margin: 0; /* Usuń domyślne marginesy */
         }
-        .logout-button {
-            background-color: rgba(255, 216, 20, 0.8);
-            color: rgba(0, 0, 0, 0.655);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .logout-button:hover {
-            background-color: rgba(0, 0, 0, 0.655);
-            color: white;
-        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
@@ -73,16 +60,16 @@
     </style>
 </head>
 <body>
-    <div class="header">
+<div class="header">
         <img src="logo.png" alt="Logo STYREX" class="logo">
-        <h1 class="title">Moje konto</h1>
-        <button class="logout-button" onclick="window.location.href='logout.html'">Wyloguj</button>
+        <h1 class="title">Moje konto - kontroluj etap realizacji zamówienia </h1>
     </div>
-    <div class="button-container">
-        <a class="o_nas" href="aktualnierealizowane.html">Aktualnie realizowane</a>
-        <a class="produkty" href="poprzedniezamowienia.html">Poprzednie zamówienia</a>
-        <a class="zaloguj_sie" href="zlozzamowienie.html">Złóż zamówienie</a>
-        <a class="zaloguj_sie" href="mojedane.html">Moje dane</a>
-    </div>
+<div class="button-container">
+    <a class="o_nas" href="blank.html">Zamówienia przyjęte do realizacji</a>
+    <a class="produkty" href="blank.html">Zamówienia skompletowane</a>
+    <a class="zaloguj_sie" href="blank.html">Zamówienia przekazane do wysyłki</a>
+    <a class="zaloguj_sie" href="blank.html">Zamówienia wysłane</a>
+</div>
+
 </body>
 </html>
